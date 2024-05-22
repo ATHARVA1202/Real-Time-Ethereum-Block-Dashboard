@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pydantic
+requests
+motor
+python-dotenv
+streamlit
+pymongo
+pandas
+plotly
+matplotlib
