@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./backend/.env:/app/.env
+    depends_on:
+      - mongo
+    networks:
+      - mynetwork
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+      - "8502:8502"
+    volumes:
+      - ./frontend:/frontend
+    depends_on:
+      - backend
+    networks:
+      - mynetwork
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mynetwork
+
+volumes:
+  mongo-data:
+
+networks:
+  mynetwork:
+    driver: bridge
