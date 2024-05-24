@@ -24,7 +24,7 @@ df['timestamp'] = df['timestamp'].apply(lambda x: int(x, 16))
 df['difficulty'] = df['difficulty'].apply(lambda x: int(x, 16))
 df['totalDifficulty'] = df['totalDifficulty'].apply(lambda x: int(x, 16))
 
-# Convert timestamp to datetime for better readability
+# Convert timestamp to datetime
 df['timestamp'] = pd.to_datetime(df['timestamp'], unit='s')
 
 # Title of the Streamlit app
