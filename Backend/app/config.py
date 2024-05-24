@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     MONGODB_URI: str
-    DB_NAME: str = "ethereum_db"
-    COLLECTION_NAME: str = "ethereum"
+    DB_NAME: str = "<YOUR_DB_NAME>"
+    COLLECTION_NAME: str = "<YOUR_COLLECTION_NAME>"
     ALCHEMY_API_KEY: str
 
     class Config:
