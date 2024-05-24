@@ -10,7 +10,6 @@ db = client["ethereum_db"]
 collection = db["ethereum"]
 
 def query_block_by_number(block_number_hex):
-    # Query block data
     block = collection.find_one({"number": block_number_hex})
     return block
 
