@@ -5,9 +5,9 @@ import plotly.express as px
 import pandas as pd
 
 # MongoDB connection
-client = MongoClient("mongodb+srv://<username>:<password>@cluster0.uh8sdha.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-db = client["ethereum_db"]
-collection = db["ethereum"]
+client = MongoClient("<YOUR_MONGODB_URI")
+db = client["YOUR_DB_NAME"]
+collection = db["YOUR_COLLECTION_NAME"]
 
 def query_block_by_number(block_number_hex):
     block = collection.find_one({"number": block_number_hex})
