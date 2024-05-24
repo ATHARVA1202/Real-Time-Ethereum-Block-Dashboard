@@ -10,7 +10,6 @@ app.include_router(router)
 
 @app.on_event("startup")
 async def startup_event():
-    # Start the background task
     asyncio.create_task(continuous_fetch_and_store())
 
 if __name__ == "__main__":
