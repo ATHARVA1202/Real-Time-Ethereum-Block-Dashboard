@@ -5,7 +5,7 @@ import plotly.express as px
 import pandas as pd
 
 # MongoDB connection
-client = MongoClient("mongodb+srv://atharvapdesai9:PlYP3eDjFjwKHo49@cluster0.uh8sdha.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+client = MongoClient("mongodb+srv://<username>:<password>@cluster0.uh8sdha.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 db = client["ethereum_db"]
 collection = db["ethereum"]
 
